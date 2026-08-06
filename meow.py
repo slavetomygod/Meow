@@ -1,7 +1,5 @@
 # I made a combined program of all ideas I had , and i am still working on it and will improve and extend it further. 
 
-
-
 import time
 import string
 import math
