@@ -234,8 +234,201 @@ def rock_paper_siccors(user , balance):
             meow = False
     return balance
 
-def order_food(user , balance ,hunger):
-    pass
+def order_food(user,balance ,hunger ):
+    cart = []
+    def TUR():
+        meow = True
+        total = 0
+        foods=["Kebab","Pide","Lahmacun","Baklava","Ayran","Tea"]
+        prices = [5.88 , 3.78 , 1.89 , 3.15,0.84,0.53]
+        hungers = [ 9 , 7 , 5 , 3 , 2 , 0.5 ]
+        print("********************************************")
+        print("----------------TURKISH-MENU----------------")
+        print("********************************************")
+        print(f"{'ITEM/S':<19} | {'PRICE':^10} | {'Hunger':>2}")
+        for food , price ,end_hunger in zip(foods , prices ,hungers):
+            print(f"{food:<19}   ${price:^8}   {end_hunger:>4}")
+        while meow:
+                decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                if decide in foods:
+                    cart.append(food)
+                    decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                elif decide == "N":
+                    position = foods.index(food)
+                    total = prices[position]
+                    meow = False
+                    return total
+                elif not decide in foods:
+                    print("Not a valid option.")
+                    continue
+
+    def GER():
+        meow = True
+        total = 0
+        foods=["Schnitzel","Bratwurst","Apfelstrudel","Pretzel","Spezi","Apfelschorle"]
+        prices = [16.16 , 5.77 ,6.93 ,3.46,4.62 ,4.62 ]
+        hungers = [9,7,4,4,1,1]
+        print("********************************************")
+        print("----------------GERMAN-MENU-----------------")
+        print("********************************************")
+        print(f"{'ITEM/S':<19} | {'PRICE':^10} | {'Hunger':>2}")
+        for food , price ,end_hunger in zip(foods , prices ,hungers):
+            print(f"{food:<19}   ${price:^8}   {end_hunger:>4}")
+        while meow:
+                decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                if decide in foods:
+                    cart.append(food)
+                    decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                elif decide == "N":
+                    position = foods.index(food)
+                    total = prices[position]
+                    meow = False
+                    return total
+                elif not decide in foods:
+                    print("Not a valid option.")
+                    continue
+            
+    def ITL():
+            meow = True
+            total = 0
+            foods=["Lasagna","Carbonara","Margherita","Gelato","Chinotto","Espresso"]
+            prices = [16.16 ,13.85 ,10.39,4.62 ,3.46,2.31 ]
+            hungers = [9,8,7,2,1,0]
+            print("********************************************")
+            print("----------------ITALIAN-MENU----------------")
+            print("********************************************")
+            print(f"{'ITEM/S':<19} | {'PRICE':^10} | {'Hunger':>2}")
+            for food , price ,end_hunger in zip(foods , prices ,hungers):
+                print(f"{food:<19}   ${price:^8}   {end_hunger:>4}")
+            while meow:
+                    decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                    if decide in foods:
+                        cart.append(food)
+                        decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                    elif decide == "N":
+                        position = foods.index(food)
+                        total = prices[position]
+                        meow = False
+                        return total
+                    elif not decide in foods:
+                        print("Not a valid option.")
+                        continue
+            
+    def EGY():
+            meow = True
+            total = 0
+            foods=["Koshary","Hawawshi","Ful Medames","Taameya","Karkadeh","Sugarcan juice"]
+            prices = [1.61 ,2.21 ,0.80,0.40,0.70 ,0.50]
+            hungers = [9,8,7,3,1,2]
+            print("********************************************")
+            print("--------------EGYPTIAN-MENU----------------")
+            print("********************************************")
+            print(f"{'ITEM/S':<19} | {'PRICE':^10} | {'Hunger':>2}")
+            for food , price ,end_hunger in zip(foods , prices ,hungers):
+                print(f"{food:<19}   ${price:^8}   {end_hunger:>4}")
+            while meow:
+                    decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                    if decide in foods:
+                        cart.append(food)
+                        decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                    elif decide == "N":
+                        position = foods.index(food)
+                        total = prices[position]
+                        meow = False
+                        return total
+                    elif not decide in foods:
+                        print("Not a valid option.")
+                        continue
+            
+    def PAK():
+        meow = True
+        total = 0
+        foods=["Biryani","Karahi","Tikka","Samosa","Lassi","Chai"]
+        prices = [5.00]
+        hungers = ["3"]
+        print("********************************************")
+        print("--------------------menu--------------------")
+        print("********************************************")
+        print(f"{'ITEM/S':<19} | {'PRICE':^10} | {'Hunger':>2}")
+    # I used AI here , to print the code in rows and columns according to how I will.
+        for food , price ,end_hunger in zip(foods , prices ,hungers):
+            print(f"{food:<19}   ${price:^8}   {end_hunger:>4}")
+        while meow:
+                decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                if decide in foods:
+                    cart.append(food)
+                    decide = input("What would you like to order ?('n' to exit) : ").capitalize().strip()
+                elif decide == "N":
+    # I used AI here because , I just couldn't work with the structure and logic to get the food's price.
+                    position = foods.index(food)
+                    total = prices[position]
+                    meow = False
+                    return total
+                elif not decide in foods:
+                    print("Not a valid option.")
+                    continue
+
+    
+    amount1 = 0
+    amount2 = 0
+    amount3 = 0
+    amount4 = 0
+    amount5 = 0
+    meow = True
+    print(f"Welcome {user}")
+    print("Welcome to 'THE MEOW RESTAURENT'")
+    print(f"{user}'s hunger --- {hunger}")
+    print(f"{user}'s balance --- {balance}")
+    ask = input("Would you like to see the menu ?(y/n) : ").lower().strip()
+    if ask == "y":
+            while meow:
+                asks = input("What Cuisine would you like to eat ?(TUR/ITL/GER/PAK/EGY)('n' to exit)('c' for cart) : ").upper().strip()
+                if asks == "TUR" or asks == "1":
+                    amount1 = TUR()
+                elif asks == "ITL" or asks == "2":
+                    amount2 = ITL()
+                elif asks == "GER" or asks == "3":
+                    amount3 = GER()
+                elif asks == "PAK" or asks == "4":
+                    amount4 = PAK()
+                elif asks == "EGY" or asks == "5":
+                    amount5 =  EGY()
+                elif asks == "N":
+                    meow = False
+                    print("Thanks for visiting!")
+                elif asks == "C":
+                    amount = amount1 + amount2 + amount3 + amount4 + amount5
+                    gst = amount * 0.16
+                    total = amount + gst
+                    print("CART :")
+                    print(*cart , sep=" ")
+                    print(f"TAX(16%) --- {gst:.2f}")
+                    print(f"total --- {total:.2f}")
+                    print(f"${balance}") 
+                    purchase = str(input("Do you want to buy all of this ?(y/n)('m' for menu) : ")).lower().strip()
+                    if purchase == "10000" :
+                        meow = False
+                    if purchase == "y":
+                        if balance < total:
+                            print("Insufficient Funds")
+                            print("Come again when you will have enough money!")
+                            continue
+                        elif total ==0 :
+                            print("You have bought Nothing")
+                        else:
+                            balance -= total
+                            print("Thanks for making the purchase !!")
+                    elif purchase == "m":
+                        continue
+                    else:
+                        meow = False
+                else:
+                    print("Choose a valid option.")
+                    continue
+                
+    else : 
+            print(f"Thanks for visiting! , {user}.")
+            return balance
 
 def calculator(user ):
     pass
@@ -262,33 +455,70 @@ def main():
     meow = True
     knowledge = 0
     balance = 0
-    hunger = 10
-    print("NOTE :Enter '10000' if you are stuck, If you are not stuck ,It will not work ! ")
-    time.sleep(3)
+    hunger = 0
+    print("NOTE : Enter '10000' if you are stuck, If you are not stuck ,It will not work ! ")
+    print("NOTE : Your hunger ")
+    print("NOTE : If your hunger is 10 ,You cant do anything ,You have to eat food to lower your hunger first")
+    print("NOTE : You can check your hunger in order/eat food.")
+    time.sleep(4)
     user = name()
     time.sleep(0.2)
     while meow:
         choice = decision(user)
         if choice == 1:
-            balance = bank(user , balance)
+                balance = bank(user , balance)
         elif choice == 2:
-            balance = slot_machine(user , balance)
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                balance = slot_machine(user , balance)
         elif choice == 3:
-            balance = rock_paper_siccors(user , balance)
+            if hunger == 10 :
+                print("Your hungry")
+            else:
+                hunger += 1
+                balance = rock_paper_siccors(user , balance)
         elif choice == 4:
             balance = order_food(user , balance , hunger)
         elif choice == 5:
-            calculator(user)
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                calculator(user)
         elif choice == 6:
             hunger = eat_food(user , hunger)
         elif choice == 7:
-            weight_converter(user)
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                weight_converter(user)
         elif choice == 8:
-            temperature_converter(user)
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                temperature_converter(user)
         elif choice == 9:
-            encrypt_msgs()
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                encrypt_msgs()
         elif choice == 10:
-            balance = dice_roller(user , balance)
+            if hunger == 10 :
+                print("Your hungry")
+                continue
+            else:
+                hunger += 1
+                balance = dice_roller(user , balance)
         elif choice == 11:
             knowledge = ball_knowledge(user , knowledge)
         else:
