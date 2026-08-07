@@ -657,7 +657,7 @@ def main():
             elif ask_user == "y":
                 print("You Died!")
                 meow = False
-                stats()
+                stats(user)
             else:
                 print(f"Its a serious matter {user} !")
                 ask_user = input("Are you sure ?(y/n) :")
