@@ -276,7 +276,7 @@ def rock_paper_siccors(user):
             meow = False
     return cash
 
-def order_food(user ,hunger ):
+def order_food(user):
     global cash
     global money_spent
     cart = []
