@@ -478,25 +478,27 @@ def order_food(user ,hunger ):
             return 
 
 def calculator(user):
-    pass
+    print("Will be added soon!")
 
 def eat_food(user):
     global hunger
+    print("Will be added soon!")
 
 def weight_converter(user):
-    pass
+    print("Will be added soon!")
 
 def temperature_converter(user):
-    pass
+    print("Will be added soon!")
 
 def encrypt_msgs(user):
-    pass
+    print("Will be added soon!")
 
 def dice_roller(user):
-    pass
+    print("Will be added soon!")
 
 def ball_knowledge(user):
-    knowledge = 0
+    meow = True
+    global knowledge
     global ball_knowledge_lock
     if ball_knowledge_lock == False:
         print("You have already given the test once ou cant give it again.")
@@ -548,12 +550,12 @@ def ball_knowledge(user):
             continue
         for opt in options[i]:
             print(opt)
-        while True:
+        while meow:
             ask = input("Enter an option (A/B/C/D): ").upper().strip()
             if ask not in ("A","B","C","D"):
                 print("Not a valid option")
                 continue
-            break
+            meow = False
         if ask == answers[i]:
             print("Correct!")
             knowledge += 1
@@ -646,7 +648,7 @@ def main():
                 hunger += 1
                 dice_roller(user )
         elif choice == 11:
-                knowledge = ball_knowledge(user)
+                ball_knowledge(user)
         elif choice == 12:
                 stats(user)
         else:
